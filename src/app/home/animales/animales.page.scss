@@ -21,3 +21,30 @@
   align-items: normal;
   align-content: normal;
 }
+
+.flex-items:nth-child(1) {
+  display: block;
+  flex-grow: 3;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.flex-items:nth-child(2) {
+  display: block;
+  flex-grow: 3;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.flex-items:nth-child(3) {
+  display: block;
+  flex-grow: 3;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
