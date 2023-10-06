@@ -1,12 +1,31 @@
-import { Component } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  idioma?: string;
+  constructor(private route: Router) {}
 
-  constructor() {}
+  idiomaEsp() {
+    this.idioma = 'esp';
+  }
 
+  idiomaIng() {
+    this.idioma = 'ingles';
+  }
+
+  idiomaPort() {
+    this.idioma = 'port';
+  }
+
+  irColor() {
+    this.route.navigate(['/color', this.idioma]);
+  }
+
+  irNumero() {
+    this.route.navigate(['/numeros', this.idioma]);
+  }
 }

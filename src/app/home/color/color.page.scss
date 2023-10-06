@@ -1,10 +1,10 @@
-.container {
+.flex-container {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: stretch;
-  align-content: stretch;
+  justify-content: center;
+  align-items: normal;
+  align-content: normal;
   height: 100%;
   width: 100%;
 }

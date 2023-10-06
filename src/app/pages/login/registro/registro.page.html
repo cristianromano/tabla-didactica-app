@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="flex">
+    <form [formGroup]="form">
+      <ion-card>
+        <div>
+          <ion-img src="./assets/idiomas.png" class="ico"></ion-img>
+        </div>
+        <ion-card-content>
+          <ion-item>
+            <ion-input
+              label="Email"
+              placeholder="Ingrese email"
+              formControlName="email"
+              style="color: yellow"
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input
+              label="Password"
+              placeholder=" Ingrese Password"
+              type="password"
+              value="password"
+              formControlName="password"
+              style="color: yellow"
+            ></ion-input>
+          </ion-item>
+          <ion-label
+            color="danger"
+            *ngIf="
+              form?.get('email')?.touched &&
+              form?.get('email')?.hasError('email')
+            "
+            style="margin-left: 30%"
+            >Email invalido</ion-label
+          >
+        </ion-card-content>
+        <div class="botones">
+          <ion-button
+            size="full"
+            [disabled]="!form.valid"
+            (click)="registro()"
+            style="color: black"
+            >Registro</ion-button
+          >
+          <ion-button
+            size="full"
+            fill="clear"
+            (click)="irLogin()"
+            style="color: black"
+            >Ir a Login</ion-button
+          >
+        </div>
+      </ion-card>
+    </form>
+  </div>
+</ion-content>
