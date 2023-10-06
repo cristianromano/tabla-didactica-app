@@ -6,11 +6,25 @@
 
 <ion-content [fullscreen]="true">
   <div class="container">
-    <ion-button (click)="idiomaEsp()">ESP</ion-button>
-    <ion-button (click)="idiomaPort()">PORTUGUES</ion-button>
-    <ion-button (click)="idiomaIng()">INGLES</ion-button>
-    <ion-button (click)="irColor()">COLORES</ion-button>
-    <ion-button (click)="irNumero()">NUMEROS</ion-button>
-    <ion-button (click)="irAnimal()">ANIMALES</ion-button>
+    <ion-button id="idioma" (click)="idiomaEsp()">
+      <ion-img src="../../assets/esp2.png"></ion-img>
+    </ion-button>
+    <ion-button id="idioma" (click)="idiomaPort()">
+      <ion-img src="../../assets/port.png"></ion-img>
+    </ion-button>
+    <ion-button id="idioma" (click)="idiomaIng()">
+      <ion-img src="../../assets/eng.jpg"></ion-img>
+    </ion-button>
+  </div>
+  <div class="botones">
+    <ion-button (click)="irColor()" style="--background: white">
+      <ion-img src="../../assets/paint.png"></ion-img>
+    </ion-button>
+    <ion-button (click)="irNumero()" style="--background: white">
+      <ion-img src="../../assets/num.jpg"></ion-img>
+    </ion-button>
+    <ion-button (click)="irAnimal()" style="--background: white">
+      <ion-img src="../../assets/animales.jpg"></ion-img>
+    </ion-button>
   </div>
 </ion-content>
