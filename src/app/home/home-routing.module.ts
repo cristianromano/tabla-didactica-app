@@ -18,8 +18,9 @@ const routes: Routes = [
       import('./numeros/numeros.module').then((m) => m.NumerosPageModule),
   },
   {
-    path: 'animales',
-    loadChildren: () => import('./animales/animales.module').then( m => m.AnimalesPageModule)
+    path: 'animales/:id',
+    loadChildren: () =>
+      import('./animales/animales.module').then((m) => m.AnimalesPageModule),
   },
 ];
 

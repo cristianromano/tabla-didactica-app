@@ -28,4 +28,8 @@ export class HomePage {
   irNumero() {
     this.route.navigate(['/numeros', this.idioma]);
   }
+
+  irAnimal() {
+    this.route.navigate(['/animales', this.idioma]);
+  }
 }

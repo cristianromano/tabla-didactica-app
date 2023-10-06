@@ -1,13 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>animales</ion-title>
+    <ion-button (click)="atras()">ATRAS</ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">animales</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="flex-container">
+    <ion-button
+      id="oso"
+      (click)="oso()"
+      style="background-color: white"
+    ></ion-button>
+    <ion-button
+      id="perro"
+      (click)="perro()"
+      style="background-color: white"
+    ></ion-button>
+    <ion-button
+      id="gato"
+      (click)="gato()"
+      style="background-color: white"
+    ></ion-button>
+  </div>
 </ion-content>

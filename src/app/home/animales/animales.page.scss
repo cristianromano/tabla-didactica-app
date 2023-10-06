@@ -1,0 +1,23 @@
+#gato {
+  --background: url("../../../assets/gato2.png") no-repeat center center fixed;
+  height: 200px;
+}
+
+#perro {
+  --background: url("../../../assets/perro.png") no-repeat center center fixed;
+  height: 250px;
+}
+
+#oso {
+  --background: url("../../../assets/oso2.png") no-repeat center center fixed;
+  height: 150px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  align-items: normal;
+  align-content: normal;
+}
