@@ -31,3 +31,13 @@ ion-img {
 ion-content {
   --background: url("../../../assets/idiomas.png") repeat center center fixed;
 }
+
+.users {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: normal;
+}
