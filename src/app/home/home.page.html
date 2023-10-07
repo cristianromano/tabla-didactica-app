@@ -1,6 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Home </ion-title>
+    <ion-button (click)="LogOut()" color="danger" style="margin-left: 120px"
+      >Log Out</ion-button
+    >
   </ion-toolbar>
 </ion-header>
 
@@ -17,13 +19,25 @@
     </ion-button>
   </div>
   <div class="botones">
-    <ion-button (click)="irColor()" style="--background: white" class="flex-items">
+    <ion-button
+      (click)="irColor()"
+      style="--background: white"
+      class="flex-items"
+    >
       <ion-img src="../../assets/paint.png"></ion-img>
     </ion-button>
-    <ion-button (click)="irNumero()" style="--background: white" class="flex-items">
+    <ion-button
+      (click)="irNumero()"
+      style="--background: white"
+      class="flex-items"
+    >
       <ion-img src="../../assets/num.jpg"></ion-img>
     </ion-button>
-    <ion-button (click)="irAnimal()" style="--background: white" class="flex-items">
+    <ion-button
+      (click)="irAnimal()"
+      style="--background: white"
+      class="flex-items"
+    >
       <ion-img src="../../assets/animales.jpg"></ion-img>
     </ion-button>
   </div>

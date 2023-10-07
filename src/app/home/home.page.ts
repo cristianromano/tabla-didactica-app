@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Auth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
@@ -7,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
   idioma?: string;
-  constructor(private route: Router) {}
+  constructor(private route: Router, private auth: Auth) {}
 
   idiomaEsp() {
     this.idioma = 'esp';
@@ -31,5 +32,10 @@ export class HomePage {
 
   irAnimal() {
     this.route.navigate(['/animales', this.idioma]);
+  }
+
+  LogOut() {
+    this.auth.signOut();
+    this.route.navigate(['/login']);
   }
 }

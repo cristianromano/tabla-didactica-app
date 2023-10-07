@@ -58,4 +58,29 @@ export class LoginPage implements OnInit {
         console.log(e.code);
       });
   }
+
+  esAdmin() {
+    this.form.get('email')?.setValue('admin@admin.com');
+    this.form.get('password')?.setValue('111111');
+  }
+
+  esInvitado() {
+    this.form.get('email')?.setValue('invitado@invitado.com');
+    this.form.get('password')?.setValue('222222');
+  }
+
+  esUser() {
+    this.form.get('email')?.setValue('usuario@usuario.com');
+    this.form.get('password')?.setValue('333333');
+  }
+
+  esAnonimo() {
+    this.form.get('email')?.setValue('anonimo@anonimo.com');
+    this.form.get('password')?.setValue('444444');
+  }
+
+  esTester() {
+    this.form.get('email')?.setValue('tester@tester.com');
+    this.form.get('password')?.setValue('555555');
+  }
 }
