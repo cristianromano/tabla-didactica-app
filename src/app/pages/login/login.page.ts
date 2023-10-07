@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Auth, getAuth, signInWithEmailAndPassword } from '@angular/fire/auth';
+import { SplashScreen } from '@capacitor/splash-screen';
 
 @Component({
   selector: 'app-login',
@@ -33,6 +34,10 @@ export class LoginPage implements OnInit {
   }
 
   async irRegistro() {
+    await SplashScreen.show({
+      showDuration: 1000,
+      autoHide: true,
+    });
     this.router.navigate(['/registro']);
   }
 
@@ -43,6 +48,10 @@ export class LoginPage implements OnInit {
     const singIn = await signInWithEmailAndPassword(this.auth, email, password)
       .then((e) => {
         console.log(e.user);
+        SplashScreen.show({
+          showDuration: 2000,
+          autoHide: true,
+        });
         this.router.navigate(['/home']);
       })
       .catch((e) => {

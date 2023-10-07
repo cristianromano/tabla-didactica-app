@@ -11,6 +11,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
 } from '@angular/fire/auth';
+import { SplashScreen } from '@capacitor/splash-screen';
 
 @Component({
   selector: 'app-registro',
@@ -39,6 +40,10 @@ export class RegistroPage implements OnInit {
   }
 
   async irLogin() {
+    await SplashScreen.show({
+      showDuration: 1000,
+      autoHide: true,
+    });
     this.router.navigate(['/login']);
   }
 
@@ -53,6 +58,10 @@ export class RegistroPage implements OnInit {
     )
       .then((e) => {
         console.log(e.user);
+         SplashScreen.show({
+          showDuration: 2000,
+          autoHide: true,
+        });
         this.router.navigate(['/home']);
       })
       .catch((e) => {
